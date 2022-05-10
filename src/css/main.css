@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe\ UI,Roboto,Helvetica\ Neue,Arial,Noto\ Sans,sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #000;
+}
+
+img{
+    display: block;
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+ul, li{
+    list-style: none;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.totalContainer{
+    width: 60%;
+    background: azure;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 3.5rem;
+    background-color: #1d0032;
+    margin-bottom: 4rem;
+}
+
+.intro{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.intro__desc{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+.intro__subtitle{
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.head__link{
+    color: aquamarine;
+    margin-left: 2.6rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+    transition: color .3s ease;
+    letter-spacing: .2rem;
+}
+
+.head__link:hover{
+    color: #0be91b;
+}
+
+.head__link:first-child{
+    margin-left: 0;
+}
+
+.post__list{
+    width: 76%;
+    margin: 0 auto;
+}
+
+.post__item{
+    border: .2rem solid #1d0032;
+    width: 100%;
+    margin: 0 auto 3rem;
+    background-color: #fdfdfd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__head{
+    display: flex;
+    margin-bottom: 1.2rem;
+}
+
+.post__head span{
+    font-weight: 700;
+    padding-right: 1rem;
+}
+
+.post__title{
+    font-weight: 600;
+}
+
+.add__input,
+.search__input{
+    padding: 1.2rem 1rem;
+    background: #fdfdfd;
+    border: .2rem solid #1d0032;
+    display: block;
+    margin-bottom: 1rem;
+    width: 44rem;
+    font-size: 1.5rem;
+}
+
+.search__input{
+    margin: 3rem 0;
+}
+
+
+.add__field{
+    width: 76%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.no__tasks{
+    font-size: 3.6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+.shouldlogin__page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+.error__title{
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.error__span{
+    font-size: 3rem;
+    color: #c90909;
+}
+
+.form__span{
+    color: #c90909;
+    display: none;
+    padding: 0 1rem 1rem;
+}
+
+.visible{
+    display: block;
+    font-size: 90%;
+}
+
+/* page */
+
+.page{
+    text-align: center;
+    padding: 2rem 10rem;
+}
+
+.page__container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page__title{
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+}
+
+.page__subtitle{
+    font-size:  3.6rem;
+    text-shadow: 1px 1px 5px #e50cff;
+    margin-bottom: 3rem;
+}
+
+.page__text{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.page__text--bottom{
+    margin-bottom: 0;
+}
+
+.page__text::first-letter{
+    font-weight: 700;
+}
+
+.img__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.about__img{
+    max-width: 30%;
+    height: 30rem;
+}
+
+.page__banner{
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+.tips__list{
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    margin: 0 auto;
+}
+
+.tips__item{
+    text-align: left;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+}
+
+.tips__span{
+    font-weight: 700;
+}
+
+.tips__img{
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.stats{
+    padding-top: 10rem;
+}
+
+.stats__container,
+.stat__item{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.stats__container{
+    text-align: left;
+    padding: 10% 0;
+    background-color: #1d0032;
+}
+
+.stat__item{
+    font-size: 2.6rem;
+    padding-bottom: 2rem;
+    color: #f3ed3f;
+    display: flex;
+    align-items: center;
+}
+
+.stat__sting{
+    padding-left: 1rem;
+}
+
+.stats__span{
+    font-weight: 700;
+    color: #41ad49;
+}
+
+.post-enter {
+    opacity: 0;
+  }
+  .post-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .post-exit {
+    opacity: 1;
+  }
+  .post-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }

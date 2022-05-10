@@ -1,0 +1,80 @@
+.btn,
+.free__btn,
+.btn__add{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn{
+    border: none;
+    border-radius: 50%;
+    background: none;
+ }
+ 
+ .btn img{
+     border-radius: 50%;
+     width: 6.4rem;
+     transition: all .4s ease;
+ }
+ 
+ .btn:hover img{
+    transform: scale(1.1);
+ }
+
+ .btn__add{
+    padding: 1rem 3rem;
+}
+
+.free__btn{
+    font-size: 2.6rem;
+    padding: 1rem 2rem;
+    margin: 4rem auto 0;
+    display: block;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn__add,
+.free__btn{
+    background: #f3ed3f;
+    transition: background .2s linear;
+    border: .2rem solid #1d0032;
+}
+
+.btn__add:disabled{
+    background: #6c6a1d;
+    cursor: no-drop;
+}
+
+.btn__add:disabled:hover{
+    background: #6c6a1d;
+}
+
+.btn__add:hover,
+.free__btn:hover{
+    background: #41ad49;
+}
+
+.btn__refresh{
+    display: block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin: 2rem auto 0;
+    border: none;
+    border-radius: 1rem;
+    background: #7a0303;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    box-shadow: .1rem .1rem 1.2rem .3rem #ff6d6d;
+    transition: all .3s linear;
+}
+
+.btn__refresh:hover{
+    box-shadow: .1rem .1rem 1.2rem .3rem #0ad1d1;
+    background: #b4e9e9;
+}
