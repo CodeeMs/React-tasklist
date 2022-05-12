@@ -26,6 +26,11 @@ ul, li{
     list-style: none;
 }
 
+#root{
+    width: 100%;
+    overflow: hidden;
+}
+
 .total{
     display: flex;
     flex-direction: column;
@@ -46,6 +51,11 @@ ul, li{
     padding: 2rem 3.5rem;
     background-color: #1d0032;
     margin-bottom: 4rem;
+}
+
+.burger,
+.hidden__menu{
+    display: none;
 }
 
 .intro{
@@ -151,6 +161,10 @@ ul, li{
     align-items: center;
     font-size: 4.8rem;
     font-weight: 700;
+}
+
+.shouldlogin__title{
+    font-size: 7rem;
 }
 
 .error__title{
@@ -299,4 +313,252 @@ ul, li{
   .post-exit-active {
     opacity: 0;
     transition: opacity 500ms ease-in;
+  }
+
+  @media (max-width: 1441px){
+    .totalContainer{
+        width: 74%;
+    }
+
+    .post__list,
+    .add__field{
+        width: 68%;
+    }
+
+    .page__container{
+        width: 100%;
+    }
+
+    .intro__desc{
+        width: 50%;
+    }
+  }
+
+  @media (max-width: 1280px){
+    .page__title{
+        font-size: 4rem;
+    }
+
+    .page__subtitle{
+        font-size: 3.4rem;
+    }
+
+    .page__text{
+        width: 62%;
+    }
+
+    .shouldlogin__title{
+        font-size: 5.4rem;
+    }
+  }
+
+  @media (max-width: 821px) and (max-height: 1181px){
+    .totalContainer,
+    .stats__container{
+        width: 100%;
+    }
+
+    .stats__container{
+        width: 100%;
+    }
+    
+
+    .stat__item{
+        width: 80%;
+    }
+
+    .head__link:hover{
+        color: aquamarine;
+    }
+
+    .shouldlogin__title{
+        font-size: 3.6rem;
+    }
+  }
+
+  @media (max-width: 992px){
+    .totalContainer {
+        width: 82%;
+    }
+
+    .stats__container{
+        width: 92%;
+    }
+
+    .page__title{
+        font-size: 3rem;
+    }
+
+    .page__subtitle {
+        font-size: 2.8rem;
+    }
+
+    .page__text {
+        width: 80%;
+    }
+
+    .about__img{
+        height: 24rem;
+    }
+
+    .shouldlogin__title {
+        font-size: 4.2rem;
+    }
+  }
+
+  @media (max-width: 768px){
+    .totalContainer{
+        width: 100%;
+    }
+
+    .shouldlogin__title {
+        font-size: 3.2rem;
+    }
+
+    .page{
+        padding: 2rem;
+    }
+
+    .about__img {
+        height: 20rem;
+    }
+
+    .page__text {
+        width: 86%;
+    }
+  }
+
+  @media (max-width: 576px){
+
+    .header__end{
+        justify-content: flex-end;
+    }
+
+      .header__navbar{
+          display: none;
+      }
+
+      .burger{
+        display: block;
+        color: aquamarine;
+        font-size: inherit;
+        letter-spacing: .2rem;
+      }
+
+      .hidden__menu{
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: #1d0032;
+         padding: 2rem 4rem 0 2rem;
+         box-shadow: 3px 4px 4px 3px #0e0316;
+      }
+
+      .hide{
+          display: none;
+      }
+
+      .visible__menu{
+          display: block;
+      }
+
+      .head__link{
+          display: block;
+          margin-left: 0;
+          margin-bottom: 2rem;
+      }
+
+      .close__btn{
+          display: block;
+          position: absolute;
+          top: 15%;
+          right: 10%;
+      }
+
+      .close__btn::before{
+        display: block;
+        content: '';
+        width: 2rem;
+        height: 0.3rem;
+        background: #fff;
+        transform: rotate(45deg) translateY(50%);
+      }
+
+      .close__btn::after{
+        display: block;
+        content: '';
+        width: 2rem;
+        height: 0.3rem;
+        background: #fff;
+        transform: rotate(-45deg) translateY(-50%);
+      }
+
+      .intro__desc {
+        width: 90%;
+    }
+
+    .post__list,
+    .add__field{
+        width: 86%;
+    }
+
+    .add__input, 
+    .search__input{
+        width: 100%;
+    }
+
+    .shouldlogin__page{
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .page__text{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .page__title{
+        font-size: 2.6rem;
+    }
+
+    .page__subtitle {
+        font-size: 2.4rem;
+    }
+
+    .img__box{
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .about__img {
+        height: 20rem;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1.2rem;
+    }
+
+    .stats__container{
+        width: 100%;
+    }
+
+    .stat__item{
+        width: 96%;
+    }
+
+    .stats__img{
+        width: 3rem;
+    }
+
+    .stat__sting{
+        font-size: 2.4rem;
+    }
+
+    .page__banner{
+        text-decoration: none;
+        font-size: 2.3rem;
+    }
+
+    .tips__item{
+        font-size: 2rem;
+    }
   }

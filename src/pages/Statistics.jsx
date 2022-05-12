@@ -38,10 +38,10 @@ const Statistics = () => {
                 <div className="stats">
                     <div className="stats__container">
                         <div className="stat__item">
-                            <img src={star} alt="start" /> <p className='stat__sting'> Tasks completed today: <span className='stats__span'>{statToday}</span></p>
+                            <img className='stats__img' src={star} alt="start" /> <p className='stat__sting'> Tasks completed today: <span className='stats__span'>{statToday}</span></p>
                         </div>
                         <div className="stat__item">
-                            <img src={star} alt="start" /> <p className='stat__sting'> Tasks completed for all time: <span className='stats__span'>{statAll}</span></p>
+                            <img className='stats__img' src={star} alt="start" /> <p className='stat__sting'> Tasks completed for all time: <span className='stats__span'>{statAll}</span></p>
                         </div>
                         <RefreshButton onClick={refreshStat}>Refresh</RefreshButton>
                     </div>

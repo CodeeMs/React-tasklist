@@ -5,7 +5,7 @@ const ShouldLogin = () => {
 
     return (
         <div className='shouldlogin__page'>
-            <h2>You must be logged in to check this page!</h2>
+            <h2 className='shouldlogin__title'>You must be logged in to check this page!</h2>
             <FreeButton/>
         </div>
     );

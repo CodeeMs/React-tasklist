@@ -15,6 +15,7 @@ const AppRouter = () => {
            ? <Routes>
                 {privateRoutes.map(route =>
                     <Route key={route.path} element={route.component} path={route.path}/>
+                   
                 )}
             </Routes>
             : <Routes>

@@ -10,35 +10,39 @@ const PostForm = ({create}) => {
      underTitle = document.querySelector('#under__title'),
      underDesc = document.querySelector('#under__desc');
     const [tasks, setTasks] = useState({title: '', description: ''});
-
+    const [text, setText] = useState('');
+    const [isVisible, setisVisible] = useState(false);
+    const [upIsVisible, setUpIsVisible] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(false);
 
     function addPost(e){
+        e.preventDefault();
         if(tasks.title === '' || tasks.description === ''){
-            underDesc.textContent = 'all fields must be filled';
-            underDesc.classList.add('visible');
-            button.setAttribute('disabled', 'disabled');
+            setText('all fields must be filled');
+            setisVisible(true);
+            setIsDisabled(true);
             return;
         }
 
         if(tasks.title.match(reg) === null || tasks.description.match(reg) === null){
-            underDesc.textContent = 'invalid characters, such as "!/#/$/%/^/&"';
-            underDesc.classList.add('visible');
-            button.setAttribute('disabled', 'disabled');
+            setText('invalid characters, such as "!/#/$/%/^/&"');
+            setisVisible(true);
+            setIsDisabled(true);
             return;
         }
         if(tasks.title.length > 20) {
-            underTitle.textContent = 'maximum length: 20 characters'
-            underTitle.classList.add('visible');
-            button.setAttribute('disabled', 'disabled');
+            setText('maximum length: 20 characters');
+            setUpIsVisible(true);
+            setIsDisabled(true);
             return;
         }
         if(tasks.description.length > 40){
-            underDesc.textContent = 'maximum length: 40 characters'
-            underDesc.classList.add('visible');
-            button.setAttribute('disabled', 'disabled');
+            setText('maximum length: 40 characters');
+            setisVisible(true);
+            setIsDisabled(true);
             return;
         }
-        e.preventDefault();
+       
             const newTask = {
                 ...tasks, id: Date.now()
             }
@@ -48,15 +52,15 @@ const PostForm = ({create}) => {
 
     function filterCheck(callback, part){
         if(callback.match(reg) && callback !== ''  && part.match(reg)){
-            underTitle.classList.remove('visible');
-            underDesc.classList.remove('visible');
-            button.removeAttribute('disabled');
+            setUpIsVisible(false);
+            setisVisible(false);
+            setIsDisabled(false);
         } else if(part.match(reg) === null){
             return;
         } else{
-            button.setAttribute('disabled', 'disabled');
-            underDesc.textContent = 'invalid characters, such as "!/#/$/%/^/&" or empty field';
-            underDesc.classList.add('visible');
+            setText('invalid characters, such as "!/#/$/%/^/&" or empty field');
+            setisVisible(true);
+            setIsDisabled(true);
         }
     } 
 
@@ -73,10 +77,10 @@ const PostForm = ({create}) => {
     return (
         <form className='add__field'>
             <MyInput id='title__input' onChange={setTitle} placeholder='Add post title' value={tasks.title} />
-            <MySpan id='under__title'></MySpan>
+            <MySpan upVisible={upIsVisible} setUpVisible={setUpIsVisible}>{text}</MySpan>
             <MyInput id='desc__input' onChange={setDescription} placeholder='Add post description' value={tasks.description} />
-            <MySpan id='under__desc'></MySpan>
-            <AddButton id='addButton' onClick={addPost}>Add Post</AddButton>
+            <MySpan visible={isVisible} setVisible={setisVisible}>{text}</MySpan>
+            <AddButton disabled={isDisabled} onClick={addPost}>Add Post</AddButton>
         </form>
     );
 };
